@@ -171,20 +171,22 @@ a {
 /* Login, Greeting  */
 .top-box {
     width: 85%;
+    position: relative;
     margin:0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding: 15px 0;
 }
 
 .top-box #greeting {
+    position: absolute;
+    left:0;
     font-size: 24px;
     font-weight: 600;
     text-shadow: 2px 4px 9px #515151;
 }
 
 .top-box #login-form {
+    position: absolute;
+    right: 0;
     font-size: 18px;
     font-weight: 700;
 }
