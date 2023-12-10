@@ -1,0 +1,329 @@
+/* Defalut */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+
+div,
+span,
+article,
+section,
+header,
+footer,
+p,
+ul,
+li,
+fieldset,
+legend,
+label,
+a,
+nav {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Roboto:wght@500;700;900&display=swap');
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Login, Greeting  */
+.top-box {
+    width: 85%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.top-box #greeting {
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 2px 4px 9px #515151;
+}
+
+.top-box #login-form {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.top-box #login-form input {
+    width: 300px;
+    height: 32px;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+.top-box #login-form button {
+    background-color: #0a0a23;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 32px;
+    min-width: 80px;
+}
+
+/* clock, TodoList */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-box #clock {
+    text-align: center;
+    font-size: 130px;
+    text-shadow: 2px 4px 9px #4a4a4a
+}
+
+.center-box #todo-form input,
+#todo-form input::placeholder {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: transparent;
+    padding: 0.6vw 0;
+    color: #fff;
+    font-size: 21px;
+}
+
+#todo-list li{
+    padding:14px 0; 
+    border-bottom: 1px solid #ddd;
+    font-family: 'Cafe24Oneprettynight';
+    font-weight: 600;
+    font-size: 18px;
+    padding:15px 10px;
+    background: rgb(239, 239, 239);
+    color:#333;
+    position: relative;
+}
+
+#todo-list button
+{
+  position: absolute;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+
+.center-box #todo-form input:focus {
+    outline: none;
+}
+
+/* Weather, Quotes */
+.bottom-box{
+    width: 85%;
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding:50px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    font-size: 18px;
+}
+
+.bottom-box #weather{
+    width:35%;
+}
+
+.bottom-box #quote{
+   width:60%;
+   text-align: right;
+}
+
+/* Mediaqury */ 
+@media only screen and (max-width: 1068px) {
+    .bottom-box #quote{
+        width:50%;
+    }
+    .center-box{
+        width:60%;
+    }
+    .center-box #clock {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width: 734px) {
+    .center-box #clock {
+        font-size: 67px;
+    }
+    .bottom-box #weather{
+        width:40%;
+    }
+    .top-box{
+        width:91%;
+    }
+    .top-box #greeting,
+    .center-box #todo-form input, #todo-form input::placeholder{
+        font-size: 18px;
+    }
+    .top-box #login-form,
+    #todo-list li{
+        font-size: 16px;
+    }
+    .top-box #login-form input {
+        width:170px;
+    }
+    .top-box #login-form button{
+        min-width: 50px;
+    }
+    .center-box{
+        width:80%;
+    }
+}
